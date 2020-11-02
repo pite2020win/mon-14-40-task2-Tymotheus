@@ -9,9 +9,6 @@
 #With every simulation step the orentation should be corrected, correction should be applied and printed out.
 #Try to expand your implementation as best as you can. 
 #Think of as many features as you can, and try implementing them.
-#
-#Try to expand your implementation as best as you can. 
-#Think of as many features as you can, and try implementing them.
 #Make intelligent use of pythons syntactic sugar (overloading, iterators, generators, etc)
 #Most of all: CREATE GOOD, RELIABLE, READABLE CODE.
 #The goal of this task is for you to SHOW YOUR BEST python programming skills.
@@ -22,3 +19,21 @@
 #Delete these comments before commit!
 #
 #Good luck.
+import random
+
+def main():
+  tilt = 0
+  print("Welcome on the board of our plane, we wish you a pleasant flight!")
+  print("...")
+  print("Holy Moly, unexpected turbulence, hang in there!")
+  while True:
+    tilt = random.gauss(0,180)
+    print("Current roll orientation is {:.2f} degrees.".format(tilt))
+    print("Autopilot is correcting the orientation by {:.2f} degrees.".format(-tilt))
+    tilt -= tilt
+    print("Should we continue the flight? Type anything to proceed. Type 'no' to exit.")
+    if input() == 'no':
+      break
+
+if __name__ == "__main__":
+  main()
