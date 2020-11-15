@@ -54,7 +54,6 @@ def flight():
   logging.info("Welcome on the board of our plane, we wish you a pleasant flight!")
   logging.info("...")
   logging.info("Holy Moly, unexpected turbulence, hang in there!")
-  n = 0
   global continue_loop
   while continue_loop:
     bermuda.apply_event()
